@@ -1,0 +1,440 @@
+@font-face {
+	font-family: 'Roboto-light';
+	src: url(../fonts/Roboto-light.woff2) format('woff2'), url(../fonts/Roboto-light.woff) format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DINNextLTPro-MediumCond';
+	src: url(../fonts/DINNextLTPro-MediumCond.woff2) format('woff2'), url(../fonts/DINNextLTPro-MediumCond.woff) format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "DINNextLTPro-MediumCond", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #333333;
+	text-transform: uppercase;
+}
+
+img {
+	max-width: 100%;
+	height: auto
+}
+
+a {
+	color: #0089cf;
+	text-decoration: none;
+}
+
+.description,
+.subscription,
+.copyright,
+.description-product p,
+.story-description,
+.advantages-list p {
+	font-family: "Roboto-light", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	color: #666666;
+	text-transform: none;
+	margin: 0;
+	padding: 0;
+}
+
+.copyright,
+.advantages-list p {
+	font-size: 12px;
+}
+
+.copyright {
+	text-align: center;
+}
+
+.inner-page-footwear {
+	background-color: #f2f9fd;
+}
+
+.inner-page-blocs {
+	background-color: #c8cfdc;
+}
+
+.inner-page-blocs .main-header {
+	background-color: #f2f9fd;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.container {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.main-header a {
+	color: #333333;
+}
+
+.main-navigation,
+.site-navigation,
+.user-navigation,
+.footwear-list,
+.footer-catalog,
+.information-company,
+.information-developers,
+.footer-social,
+.catalog-blocs-list,
+.advantages-list,
+.exclusive-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.main-navigation {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.site-navigation {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.user-navigation {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	margin-left: auto;
+}
+
+.catalog-product h1 {
+	font-size: 45px;
+	margin: 0;
+	display: block;
+	text-align: center;	
+}
+
+.catalog-product>a {
+	text-align: center;	
+	display: block;
+}
+
+.filters-sorting {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.footwear-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.footwear-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.footwear-list h2,
+.catalog-blocs-item h2,
+.price,
+.filters label,
+.advantages-list li,
+.stock-price {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.price span {
+	text-decoration: line-through;
+	color: #fc7070;
+}
+
+.price::before,
+.price span::before,
+.stock-price span::before {
+	content: "$";
+	display: inline-block;
+}
+
+.main-footer {
+	background-color: #0c0d0d;
+	color: #666666;
+}
+
+.main-footer a {
+	color: inherit;	
+}
+
+.footer-wrapper {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.footer-navigation {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.filter-button {
+	background: url("../img/filter.svg") no-repeat center;
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	top: 66%;
+	left: 49%;
+	width: 72px;
+	height: 72px;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+}
+
+.filters {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	background-color: #000000;
+	opacity: .9;
+}
+
+.filters fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.filters legend {
+	color: #ffffff;
+	line-height: 35px;
+}
+
+.filters label {
+	color: #666666;
+	line-height: 30px;
+}
+
+.filter-shoes {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+/*Стилизация страницы catalog-blocs*/
+
+.catalog-blocs-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.catalog-blocs-item {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+/*Стилизация страницы product-page*/
+
+.inner-page-product .main-product {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.product-characteristic {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+}
+
+.product-characteristic h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 35px;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.product-characteristic h1 span,
+.description-product h2,
+.story-advantages h3,
+.box-product h2,
+.social-product h3 {
+	font-size: 25px;
+	display: block;
+	font-weight: 500;
+}
+
+.inner-page-product .price,
+.inner-page-product .colors {
+	color: #666666;
+	margin: 0;
+}
+
+.grid-size {
+	border: none;
+	padding: 0;
+}
+
+.grid-size legend {
+	font-family: "Roboto-light", Arial, sans-serif;
+	font-size: 12px;
+	line-height: 35px;
+	font-weight: 300;
+	text-transform: none;
+	color: #666666;
+}
+
+.description-product {
+	width: 100%;
+	padding: 260px 0;
+	background: url(../img/page-product-bg.png) no-repeat;
+	background-size: cover;
+	color: #ffffff;
+}
+
+.description-product h2 {
+	margin: 0;
+}
+
+.description-product p {
+	width: 31%;
+	color: #ffffff;
+	line-height: 25px;
+}
+
+.advantages-product {
+	background: url("../img/page-product-bg-1.png") no-repeat;
+	background-size: cover;
+	padding-bottom: 200px;
+}
+
+.advantages-wrapper {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.advantages-wrapper h3 {
+	margin: 0;
+}
+
+.story-advantages p,
+.social-product p {
+	color: #666;
+	margin: 0;
+}
+
+.story-description {
+	width: 42%;
+	line-height: 25px;
+}
+
+.box-product {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 15px 26px 19px;
+	box-sizing: border-box;
+	border: 4px solid #e4e4e4;
+	width: 300px;
+}
+
+.stock-price {
+	padding-left: 7px;
+	padding-right: 11px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.social-picture {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.social-product img {
+	opacity: .4;
+}
+
+/*Стилизация страницы Эксклюзивных товаров*/
+
+.container-inner {
+	width: 824px;
+	margin: 0 auto;
+}
+
+.exclusive-item {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
