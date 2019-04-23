@@ -7,25 +7,26 @@
 	<title>Интернет-магазин Bree-ecom</title>
 </head>
 <body class="inner-page-exclusive">
-	<input type="radio" id="search" name="search-form">
-	<header class="main-header">
-		<nav class="main-navigation">
-			<a href="#0" class="header-logo"><img src="img/logo.svg" alt="Логотип Интернет-магазин Bree-ecom" width="22" height="30"></a>
-			<ul class="site-navigation">
-				<li><a href="#0">footwear</a></li>
-				<li><a href="#0">clothing</a></li>
-				<li><a href="#0">acessories</a></li>
-				<li><a href="#0">brands</a></li>
-				<li><a href="#0">clearance</a></li>
-			</ul>
-			<ul class="user-navigation">
-				<li class="search-button">
-					<span class="search"><label for="search">search</label></span>
-					<form class="search-form" action="#0" method="post">
-						<p><span>search on bree</span>Start typing</p>
-						<input name="search" placeholder="search of goods" type="search">
-						<button type="submit">Поиск</button>
-					</form>
+	<input type="radio" id="search" name="search-form" class="visually-hidden">
+	<div class="site-wrapper" id="basket-wrapper">
+		<header class="main-header">
+			<nav class="main-navigation">
+				<a href="#0" class="header-logo"><img src="img/logo.svg" alt="Логотип Интернет-магазин Bree-ecom" width="22" height="30"></a>
+				<ul class="site-navigation">
+					<li><a href="#0">footwear</a></li>
+					<li><a href="#0">clothing</a></li>
+					<li><a href="#0">acessories</a></li>
+					<li><a href="#0">brands</a></li>
+					<li><a href="#0">clearance</a></li>
+				</ul>
+				<ul class="user-navigation">
+					<li class="search-button">
+						<a href="#0"><label for="search">search</label></label></a>
+						<form class="search-form" action="#0" method="post">
+							<p><span>search on bree</span>Start typing</p>
+							<input name="search" placeholder="search of goods" type="search">
+							<button type="submit">Поиск</button>
+						</form>
 					<!-- <div class="found-products">
 						<p>footwear<span>(3)</span></p>
 						<ul>
@@ -56,59 +57,64 @@
 						</ul>
 					</div> -->
 				</li>
-				<li class="basket-link">
-					<a href="#0">cart<span>(2)</span></a>
-					<form class="basket" action="#0" method="post">
-						<h2>Informations</h2>
-						<fieldset class="personal-information">
-							<legend>personnal informations</legend>
-							<select name="country" size="1">
-								<option value="russia">Россия</option>
-								<option value="belarus">Беллорусия</option>
-								<option value="finland">Финляндия</option>
-							</select>
-							<div class="personal-information-wrapper">
-								<input type="text" placeholder="First name" name="first-name">
-								<input type="text" placeholder="Second name" name="second-name">
-								<input type="text" placeholder="Adress" name="adress">
-								<input type="text" placeholder="Postal code" name="postal-code">
-								<input type="text" placeholder="City" name="city">
-								<input type="email" placeholder="Email" name="email">
-								<input type="tel" placeholder="Phone" name="phone">
-							</div>
-						</fieldset>
-						<fieldset class="comment">
-							<legend>notes</legend>
-							<textarea name="note" rows="1" cols="30" placeholder="Note"></textarea>
-						</fieldset>
-						<fieldset class="delivery">
-							<legend>delivery mode</legend>
-							<select name="delivery" size="1">
-								<option value="collisimo-france">Collisimo france, &#36;20.00</option>
-								<option value="russian-post">Russian post, &#36;15.00</option>
-							</select>
-						</fieldset>
-						<fieldset class="products-basket">
-							<legend>your cart</legend>
-							<ul class="products-basket-list">
-								<li class="products-basket-item">
-									<p class="products-basket-quantity"><span>1</span><button class="more">Увеличить</button><button class="less">Уменьшить</button></p>
-									<img src="img/comme-basket.png" alt="Кроссовки comme des" width="55" height="31">
-									<p class="products-basket-description">comme des garcons play <span>Rod Laver Vintage - exlusive</span></p>
-									<p class="products-basket-price">size <span>7,5</span> &#36; 105.00</p>
-								</li>
-								<li class="products-basket-item">
-									<p class="products-basket-quantity"><span>1</span><button class="more">Увеличить</button><button class="less">Уменьшить</button></p>
-									<img src="img/nike-basket.png" alt="Кроссовки nike" width="55" height="26">
-									<p class="products-basket-description">nike <span>Air Max Tavas SD</span></p>
-									<p class="products-basket-price">size <span>7,5</span> &#36; 160.00</p>
-								</li>
-							</ul>
-							<p class="basket-sum-shipping">shipping<span>&#36; 20.00</span></p>
-							<p class="products-sum-subtotal">subtotal<span>&#36; 285.00</span></p>
-						</fieldset>
-						<label class="consent"><input type="checkbox" name="consent-processing">I agree <a href="#0">terms of use and privacy</a></label>
-						<button class="button button-basket" type="submit">confirm</button>
+				<li class="basket-link-icon">
+					<a href="#basket" class="basket-link">cart<span>(2)</span></a>
+					<form class="basket" id="basket" action="#0" method="post">
+						<div class="informations-customer">
+							<h2>Informations</h2>
+							<fieldset class="personal-information">
+								<legend>personnal informations</legend>
+								<select name="country" size="1">
+									<option value="russia">Россия</option>
+									<option value="belarus">Беллорусия</option>
+									<option value="finland">Финляндия</option>
+								</select>
+								<div class="personal-information-wrapper">
+									<input type="text" placeholder="First name" name="first-name">
+									<input type="text" placeholder="Second name" name="second-name">
+									<input type="text" placeholder="Adress" name="adress">
+									<input type="text" placeholder="Postal code" name="postal-code">
+									<input type="text" placeholder="City" name="city">
+									<input type="email" placeholder="Email" name="email">
+									<input type="tel" placeholder="Phone" name="phone">
+								</div>
+							</fieldset>
+							<fieldset class="comment">
+								<legend>notes</legend>
+								<textarea name="note" rows="1" cols="30" placeholder="Note"></textarea>
+							</fieldset>
+							<fieldset class="delivery">
+								<legend>delivery mode</legend>
+								<select name="delivery" size="1">
+									<option value="collisimo-france">Collisimo france, &#36;20.00</option>
+									<option value="russian-post">Russian post, &#36;15.00</option>
+								</select>
+							</fieldset>
+						</div>
+						<div class="informations-products">
+							<fieldset class="products-basket">
+								<legend>your cart</legend>
+								<ul class="products-basket-list">
+									<li class="products-basket-item">
+										<p class="products-basket-quantity"><span>1</span><button class="more">Увеличить</button><button class="less">Уменьшить</button></p>
+										<img src="img/comme-basket.png" alt="Кроссовки comme des" width="55" height="31">
+										<p class="products-basket-description">comme des garcons play <span>Rod Laver Vintage - exlusive</span></p>
+										<p class="products-basket-price">size <span>7,5</span> &#36; 105.00</p>
+									</li>
+									<li class="products-basket-item">
+										<p class="products-basket-quantity"><span>1</span><button class="more">Увеличить</button><button class="less">Уменьшить</button></p>
+										<img src="img/nike-basket.png" alt="Кроссовки nike" width="55" height="26">
+										<p class="products-basket-description">nike <span>Air Max Tavas SD</span></p>
+										<p class="products-basket-price">size <span>7,5</span> &#36; 160.00</p>
+									</li>
+								</ul>
+								<p class="basket-sum-shipping">shipping<span>&#36; 20.00</span></p>
+								<p class="products-sum-subtotal">subtotal<span>&#36; 285.00</span></p>
+							</fieldset>
+							<input type="checkbox" name="consent-processing" class="visually-hidden" id="consent-processing">
+							<label class="consent" for="consent-processing">I agree <a href="#0">terms of use and privacy</a></label>
+							<button class="button button-basket" type="submit">confirm</button>
+						</div>
 					</form>
 				</li>
 				<li class="login-link">
@@ -131,7 +137,9 @@
 			</form>	
 			<ul class="exclusive-list container-inner">
 				<li class="exclusive-item">
-					<img src="img/exclusive-product-1.png" alt="Эксклюзивный товар kith" witgh="780" height="530">
+					<div class="picture">
+						<img src="img/exclusive-product-1.png" alt="Эксклюзивный товар kith" witgh="780" height="530">
+					</div>
 					<div class="pick">
 						<h2>kith</h2>
 						<p class="description">Verctical Logo Tee - White / Navy</p>
@@ -139,23 +147,25 @@
 					</div>
 				</li>
 				<li class="exclusive-item">
-					<img src="img/exclusive-product-2.png" alt="Эксклюзивный товар lanvin" witgh="352" height="211">
-					<div class="pick">
-						<h2>lanvin</h2>
-						<p class="description">Purple Metallic High-Top</p>
-						<p class="price">700</p>
+					<div class="exclusive-item-wrapper">
+						<div class="picture">
+							<img src="img/exclusive-product-2.png" alt="Эксклюзивный товар lanvin" witgh="352" height="211">
+							<h2>lanvin</h2>
+							<p class="description">Purple Metallic High-Top</p>
+							<p class="price">700.00</p>
+						</div>
 					</div>
-				</li>
-				<li class="exclusive-item">
-					<img src="img/exclusive-product-3.png" alt="Эксклюзивный товар stampd" witgh="889" height="621">
 					<div class="pick">
 						<h2>stampd</h2>
 						<p class="description">Classics Astor MA-1  Jacket - Burgundy</p>
 						<p class="price">220.00</p>
 					</div>
+					<img src="img/exclusive-product-3.png" alt="Эксклюзивный товар stampd" witgh="889" height="621">
 				</li>
 				<li class="exclusive-item">
-					<img src="img/exclusive-product-4.png" alt="Эксклюзивный товар kith" witgh="800" height="530">
+					<div class="picture">
+						<img src="img/exclusive-product-4.png" alt="Эксклюзивный товар kith" witgh="800" height="530">
+					</div>
 					<div class="pick">
 						<h2>kith</h2>
 						<p class="description">Just Don All Star Varsity Jacket - Grey</p>
@@ -163,7 +173,9 @@
 					</div>
 				</li>
 				<li class="exclusive-item">
-					<img src="img/exclusive-product-5.png" alt="Эксклюзивный товар adidas originals x pharrell" witgh="804" height="568">
+					<div class="picture">
+						<img src="img/exclusive-product-5.png" alt="Эксклюзивный товар adidas originals x pharrell" witgh="804" height="568">
+					</div>
 					<div class="pick">
 						<h2>adidas originals x pharrell</h2>
 						<p class="description">Lil jacket - Polka Dot / Red</p>
@@ -171,7 +183,9 @@
 					</div>
 				</li>
 				<li class="exclusive-item">
-					<img src="img/exclusive-product-6.png" alt="Эксклюзивный товар raf simons" witgh="380" height="530">
+					<div class="picture">
+						<img src="img/exclusive-product-6.png" alt="Эксклюзивный товар raf simons" witgh="380" height="530">
+					</div>
 					<div class="pick">
 						<h2>raf simons</h2>
 						<p class="description">Black Velcro High-Top</p>
@@ -179,7 +193,9 @@
 					</div>
 				</li>
 				<li class="exclusive-item">
-					<img src="img/exclusive-product-7.png" alt="Эксклюзивный товар kith x ones stroke ueno" witgh="780" height="530">
+					<div class="picture">
+						<img src="img/exclusive-product-7.png" alt="Эксклюзивный товар kith x ones stroke ueno" witgh="780" height="530">
+					</div>
 					<div class="pick">
 						<h2>kith x ones stroke ueno</h2>
 						<p class="description">Distressed Denim Pant - Black</p>
@@ -187,7 +203,9 @@
 					</div>
 				</li>
 				<li class="exclusive-item">
-					<img src="img/exclusive-product-8.png" alt="Эксклюзивный товар raf simons" witgh="351" height="240">
+					<div class="picture">
+						<img src="img/exclusive-product-8.png" alt="Эксклюзивный товар raf simons" witgh="351" height="240">
+					</div>
 					<div class="pick">
 						<h2>raf simons</h2>
 						<p class="description">Black Leather Heel Pocket High-Top</p>
@@ -195,7 +213,9 @@
 					</div>
 				</li>
 				<li class="exclusive-item">
-					<img src="img/exclusive-product-9.png" alt="Эксклюзивный товар supreme" witgh="275" height="346">
+					<div class="picture">
+						<img src="img/exclusive-product-9.png" alt="Эксклюзивный товар supreme" witgh="275" height="346">
+					</div>
 					<div class="pick">
 						<h2>supreme</h2>
 						<p class="description">Child of hell Beanie</p>
@@ -243,5 +263,6 @@
 		</div>
 		<p class="copyright">Copyright © 2015 Bree Orthonormai. All rights reserved.</p>
 	</footer>
+</div>
 </body>
 </html>
