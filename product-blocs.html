@@ -9,7 +9,7 @@
 <body class="inner-page-blocs">
 	<header class="main-header">
 		<nav class="main-navigation">
-			<a href="#0" class="header-logo"><img src="img/logo.svg" alt="Логотип Интернет-магазин Bree-ecom" width="22" height="30"></a>
+			<a href="#0" class="header-logo">Логотип Bree-ecom</a>
 			<ul class="site-navigation">
 				<li><a href="#0">footwear</a></li>
 				<li><a href="#0">clothing</a></li>
@@ -18,107 +18,205 @@
 				<li><a href="#0">clearance</a></li>
 			</ul>
 			<ul class="user-navigation">
-				<li class="search-button">
-					<button type="button">search</button>
-					<!-- <form class="search-form" action="#0" method="post">
-					
-					</form> -->
+				<li class="search-link">
+					<a href="#0" class="search-link-icon">search</a>
+						<!-- <form class="search-form" action="#0" method="post">
+							<p><span>search on bree</span>Start typing</p>
+							<input name="search" placeholder="search of goods" type="search">
+							<button type="submit">Поиск</button>
+						</form>
+					<div class="found-products">
+						<p>footwear<span>(3)</span></p>
+						<ul>
+							<li>
+								<img src="img/search-product-1.png" alt="Кроссовки raf simons x adidas" width="280" height="430">
+								<h3>raf simons x adidas</h3>
+								<p class="description">Mid - Platform Light-Up</p>
+								<p class="price">760.00</p>
+							</li>
+							<li>
+								<img src="img/search-product-2.png" alt="Кроссовки raf simons x adidas" width="271" height="180">
+								<h3>raf simons x adidas</h3>
+								<p class="description">Stan smith classic</p>
+								<p class="price">300.00</p>
+							</li>
+							<li>
+								<img src="img/search-product-3.png" alt="Кроссовки raf simons" width="227" height="303">
+								<h3>raf simons</h3>
+								<p class="description">Hi top velcro straps</p>
+								<p class="price">788.00</p>
+							</li>
+							<li>
+								<img src="img/search-product-4.png" alt="Кроссовки raf simons" width="228" height="145">
+								<h3>raf simons</h3>
+								<p class="description">Hi top velcro straps</p>
+								<p class="price">788.00</p>
+							</li>
+						</ul>
+					</div> -->
 				</li>
 				<li class="basket-link">
-					<a href="#0">cart<span>(2)</span></a>
-					<!-- <form class="basket" action="#0" method="post">
-					
-					</form> -->
+					<a href="#0" class="basket-link-icon">cart<span>(2)</span></a>
+					<form class="basket"action="#0" method="post">
+						<div class="informations-customer">
+							<h2>Informations</h2>
+							<fieldset class="personal-information">
+								<legend>personnal informations</legend>
+								<select name="country" size="1">
+									<option value="russia">Россия</option>
+									<option value="belarus">Беллорусия</option>
+									<option value="finland">Финляндия</option>
+								</select>
+								<div class="personal-information-wrapper">
+									<input type="text" placeholder="First name" name="first-name">
+									<input type="text" placeholder="Second name" name="second-name">
+									<input type="text" placeholder="Adress" name="adress">
+									<input type="text" placeholder="Postal code" name="postal-code">
+									<input type="text" placeholder="City" name="city">
+									<input type="email" placeholder="Email" name="email">
+									<input type="tel" placeholder="Phone" name="phone">
+								</div>
+							</fieldset>
+							<fieldset class="comment">
+								<legend>notes</legend>
+								<textarea name="note" rows="1" cols="30" placeholder="Note"></textarea>
+							</fieldset>
+							<fieldset class="delivery">
+								<legend>delivery mode</legend>
+								<select name="delivery" size="1">
+									<option value="collisimo-france">Collisimo france, &#36;20.00</option>
+									<option value="russian-post">Russian post, &#36;15.00</option>
+								</select>
+							</fieldset>
+						</div>
+						<div class="informations-products">
+							<fieldset class="products-basket">
+								<legend>your cart</legend>
+								<ul class="products-basket-list">
+									<li class="products-basket-item">
+										<p class="products-basket-quantity"><span>1</span><button class="more">Увеличить</button><button class="less">Уменьшить</button></p>
+										<img src="img/comme-basket.png" alt="Кроссовки comme des" width="55" height="31">
+										<p class="products-basket-description">comme des garcons play <span>Rod Laver Vintage - exlusive</span></p>
+										<p class="products-basket-price">size <span>7,5</span> &#36; 105.00</p>
+									</li>
+									<li class="products-basket-item">
+										<p class="products-basket-quantity"><span>1</span><button class="more">Увеличить</button><button class="less">Уменьшить</button></p>
+										<img src="img/nike-basket.png" alt="Кроссовки nike" width="55" height="26">
+										<p class="products-basket-description">nike <span>Air Max Tavas SD</span></p>
+										<p class="products-basket-price">size <span>7,5</span> &#36; 160.00</p>
+									</li>
+								</ul>
+								<p class="basket-sum-shipping">shipping<span>&#36; 20.00</span></p>
+								<p class="products-sum-subtotal">subtotal<span>&#36; 285.00</span></p>
+							</fieldset>
+							<input type="checkbox" name="consent-processing" class="visually-hidden" id="consent-processing">
+							<label class="consent" for="consent-processing">I agree <a href="#0">terms of use and privacy</a></label>
+							<button class="button button-basket" type="submit">confirm</button>
+						</div>
+					</form>
 				</li>
 				<li class="login-link">
-					<a href="#0">sign in</a>
+					<a class="login-link-icon" href="#0">sign in</a>
 				</li>
 			</ul>
 		</nav>		
 	</header>
 	<main class="main-contents">
-		<section class="catalog-blocs">
+		<section class="catalog-blocs container-blocs">
 			<h1 class="visually-hidden">Каталог продуков</h1>
-			<ul class="catalog-blocs-list">
-				<li class="catalog-blocs-item">
-					<img src="img/blocs-product-1.png" alt="Кроссовки nike" width="233" height="108">
-					<h2>nike</h2>
-					<p class="description">Air Max Tavas SD</p>
-					<p class="price">160.00</p>
+			<ul class="catalog-blocs-list row">
+				<li class="col-1">
+					<div class="catalog-blocs-item catalog-blocs-air">
+						<img src="img/blocs-product-1.png" alt="Кроссовки nike" width="233" height="108">
+						<h2>nike</h2>
+						<p class="description">Air Max Tavas SD</p>
+						<p class="price">160.00</p>
+					</div>
 				</li>
-				<li class="catalog-blocs-item">
-					<img src="img/blocs-product-2.png" alt="Кроссовки common projects" width="243" height="96">
-					<h2>common projects</h2>
-					<p class="description">Red Canvas & Leather</p>
-					<p class="price">410.00</p>
+				<li class="col-1">
+					<div class="catalog-blocs-item">
+						<img src="img/blocs-product-2.png" alt="Кроссовки common projects" width="243" height="96">
+						<h2>common projects</h2>
+						<p class="description">Red Canvas & Leather</p>
+						<p class="price">410.00</p>
+					</div>
 				</li>
-				<li class="catalog-blocs-item">
-					<a href="#0" class="footwear-exclusive">exclusive</a>
-					<img src="img/catalog-footwear-5.jpg" alt="Кроссовки comme des garcons play" width="240" height="97">
-					<h2>comme des garcons play</h2>
-					<p class="description">Black Heart Logo Converce Edition</p>
-					<p class="price">160.00 <span>200.00</span></p>
+				<li class="col-1">
+					<div class="catalog-blocs-item">
+						<a href="#0" class="footwear-exclusive">exclusive</a>
+						<img src="img/blocs-product-3.png" alt="Кроссовки comme des garcons play" width="240" height="97">
+						<h2>comme des garcons play</h2>
+						<p class="description">Black Heart Logo Converce Edition</p>
+						<p class="price">160.00 <span>200.00</span></p>
+					</div>
 				</li>
-				<li class="catalog-blocs-item">	
-					<a href="#0" class="footwear-exclusive">exclusive</a>
-					<img src="img/catalog-footwear-6.jpg" alt="Кроссовки comme des garcons play" width="238" height="134">
-					<h2>comme des garcons play</h2>
-					<p class="description">Rod Laver Vintage - exclusive</p>
-					<p class="price">105.00</p>
+				<li class="col-1">
+					<div class="catalog-blocs-item">	
+						<a href="#0" class="footwear-exclusive">exclusive</a>
+						<img src="img/blocs-product-4.png" alt="Кроссовки comme des garcons play" width="238" height="134">
+						<h2>comme des garcons play</h2>
+						<p class="description">Rod Laver Vintage - exclusive</p>
+						<p class="price">105.00</p>
+					</div>
 				</li>
-				<li class="catalog-blocs-item">
-					<img src="img/blocs-product-3.png" alt="Жакет" width="280" height="430">
-					<h2>new arrivals</h2>
-					<h3>jacket</h3>
+				<li class="col-1">
+					<div class="catalog-blocs-item catalog-blocs-jacket">
+						<h3>new arrivals</h3>
+						<h2>jacket</h2>
+					</div>
 				</li>
-				<li class="catalog-blocs-item">
-					<a href="#0" class="footwear-news">news</a>
-					<img src="img/blocs-product-4.png" alt="Жакет balmain" width="580" height="430">
-					<h2>balmain</h2>
-					<p class="description"><span>Black Leather Biker Jacket</span>Supple leather biker jacket in black. Silver-tone hardware. Band collar fastened at press-stud closure. Ribbed detailing at shoulders.</p>
-					<p class="price">410.00</p>
+				<li class="col-2">
+					<div class="catalog-blocs-item catalog-blocs-balmain">
+						<div class="blocs-balmain-picture">
+							<img src="img/blocs-product-6.png" alt="Жакет balmain" width="277" height="430">
+						</div>
+						<div class="catalog-balmain-description">
+							<a href="#0" class="footwear-news">news</a>
+							<h2>balmain</h2>
+							<p class="description"><span>Black Leather Biker Jacket</span>Supple leather biker jacket in black. Silver-tone hardware. Band collar fastened at press-stud closure. Ribbed detailing at shoulders.</p>
+							<p class="price">410.00</p>
+						</div>
+					</div>
 				</li>
-				<li class="catalog-blocs-item">
-					<a href="#0" class="footwear-news">news</a>
-					<img src="img/blocs-product-5.png" alt="Кроссовки raf simons" width="580" height="280">
-					<h2>raf simons</h2>
-					<p class="description">Black adidas by RAF SIMONS Platform Light-Up Sneakers</p>
-					<p class="price">760.00</p>
+				<li class="col-2">
+					<div class="catalog-blocs-item catalog-blocs-raf">
+						<a href="#0" class="footwear-news">news</a>
+						<img src="img/blocs-product-7.png" alt="Кроссовки raf simons" width="580" height="280">
+						<h2>raf simons</h2>
+						<p class="description">Black adidas by RAF SIMONS Platform Light-Up Sneakers</p>
+						<p class="price">760.00</p>
+					</div>
 				</li>
-				<li class="catalog-blocs-item">
-					<span></span>
-					<img src="img/blocs-product-logo.svg" alt="Логотип nixon" width="116" height="24">
-					<p class="description">We make the little shit better. The stuff you have that isn't noticed first, but cant's be ignored. We pay attention to it. We argue about it. We work day and night to make the little shit as good as it can be, so when you wear it, you feel like you've got a leg up on the rest of the world.</p>
-					<a href="#0" class="link-shop">shop brand</a>
+				<li class="col-1">
+					<div class="catalog-blocs-item catalog-blocs-nixon">
+						<h3>brand</h3>
+						<img src="img/blocs-product-logo.svg" alt="Логотип nixon" width="116" height="24">
+						<p class="description">We make the little shit better. The stuff you have that isn't noticed first, but cant's be ignored. We pay attention to it. We argue about it. We work day and night to make the little shit as good as it can be, so when you wear it, you feel like you've got a leg up on the rest of the world.</p>
+						<a href="#0" class="link-shop">shop brand</a>
+					</div>
 				</li>
 			</ul>
 		</section>
 	</main>
 	<footer class="main-footer">
-		<div class="footer-wrapper">
-			<a href="#0" class="header-logo"><img src="img/logo.svg" alt="Логотип Интернет-магазин Bree-ecom" width="22" height="30"></a>
-			<section class="footer-navigation">
-				<ul class="footer-catalog">
-					<li><a href="#0">footwear</a></li>
-					<li><a href="#0"></a>clothing</li>
-					<li><a href="#0"></a>accessories</li>
-					<li><a href="#0"></a>brands</li>
-					<li><a href="#0"></a>clearance</li>
-				</ul>
-				<ul class="information-company">
-					<li><a href="#0">about</a></li>
-					<li><a href="#0">contacts us</a></li>
-					<li><a href="#0">support</a></li>
-					<li><a href="#0">store locator</a></li>
-					<li><a href="#0">press room</a></li>
-				</ul>
-				<ul class="information-developers">
-					<li><a href="#0">website terms</a></li>
-					<li><a href="#0">select country</a></li>
-					<li><a href="#0">source code</a></li>
-				</ul>
-			</section>
-			<section>
+		<section class="footer-navigation">
+			<a href="#0" class="footer-logo">Логотип Bree-ecom</a>
+			<ul class="footer-catalog-list">
+				<li class="footer-catalog-item"><a href="#0">footwear</a></li>
+				<li class="footer-catalog-item"><a href="#0"></a>clothing</li>
+				<li class="footer-catalog-item"><a href="#0"></a>accessories</li>
+				<li class="footer-catalog-item"><a href="#0"></a>brands</li>
+				<li class="footer-catalog-item"><a href="#0"></a>clearance</li>
+				<li class="footer-catalog-item"><a href="#0">about</a></li>
+				<li class="footer-catalog-item"><a href="#0">contacts us</a></li>
+				<li class="footer-catalog-item"><a href="#0">support</a></li>
+				<li class="footer-catalog-item"><a href="#0">store locator</a></li>
+				<li class="footer-catalog-item"><a href="#0">press room</a></li>
+				<li class="footer-catalog-item"><a href="#0">website terms</a></li>
+				<li class="footer-catalog-item"><a href="#0">select country</a></li>
+				<li class="footer-catalog-item"><a href="#0">source code</a></li>
+			</ul>
+			<div class="footer-social-wrapper">
 				<ul class="footer-social">
 					<li><a class="social-button youtube-icon" href="#0">youtube</a></li>
 					<li><a class="social-button instagram-icon" href="#0">instagram</a></li>
@@ -127,8 +225,8 @@
 					<li><a class="social-button pinterest-icon" href="#0">pinterest</a></li>
 				</ul>
 				<a href="#0" class="subscription">Subscribe our newsletter...</a>
-			</section>
-		</div>
+			</div>
+		</section>
 		<p class="copyright">Copyright © 2015 Bree Orthonormai. All rights reserved.</p>
 	</footer>
 </body>
