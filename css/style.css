@@ -920,27 +920,43 @@ a {
 .basket {
 	width: 560px;
 	box-sizing: border-box;
-	position: absolute; 
-	opacity: 0; 
+	position: absolute;
+	top: 0;
+	right: -560px;
+	z-index: 50;
+	opacity: 0;
 	pointer-events: none;
-	top: 0;
-	transform: translateX(70px);
 }
 
-/*.basket:target {
-	position: fixed;
+#basket:target {
+	transform: translateX(-560px);
+	transition: all .3s ease-in-out;
+	overflow-y: hidden;
+}
+
+#basket:target .basket,
+#basket:target .overlay {
 	opacity: 1;
-	pointer-events: initial;
-	top: 0;
-	transform: translateX(-565px);
-	transition: transform 2s;
+	pointer-events: auto;
 }
 
-.site-wrapper:target {
-	transform: translateX(-565px);
-	transition: transform 2s; 
+#basket:target .basket {
+	overflow: scroll;
+	height: 100vh;
 }
-*/
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .2);
+	z-index: 5;
+	opacity: 0;
+	pointer-events: none;
+}
+
 .informations-customer {
 	padding: 31px 41px 0 40px;
 	margin-bottom: 25px;
