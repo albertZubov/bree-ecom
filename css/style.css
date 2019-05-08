@@ -43,7 +43,8 @@ a {
 .basket select,
 .comment textarea,
 .products-basket-description span,
-.consent {
+.consent,
+.box-product-model {
 	font-family: "Roboto-light", Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 300;
@@ -173,6 +174,10 @@ a {
 	background: url(../img/user-nav.svg) no-repeat 0 0;
 }
 
+.catalog-product {
+	margin-bottom: 50px;
+}
+
 .catalog-product h1 {
 	font-size: 45px;
 	margin: 0;
@@ -184,6 +189,10 @@ a {
 
 .inner-page-exclusive .catalog-product h1 {
 	background: url(../img/forme-2.svg) no-repeat center;
+}
+
+.inner-page-footwear .catalog-product h1 {
+	background: url(../img/forme-1.svg) no-repeat center;
 }
 
 .catalog-product .loading {
@@ -211,13 +220,6 @@ a {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-}
-
-.footwear-item {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
 
 .footwear-list h2,
@@ -381,6 +383,12 @@ a {
 	letter-spacing: 0.35px;
 }
 
+.inner-page-product .price,
+.inner-page-product .colors {
+	color: #666666;
+	margin: 0;
+}
+
 .filter-button,
 .products-basket-list button {
 	font-size: 0;
@@ -399,13 +407,16 @@ a {
 	padding: 0;
 }
 
+.filters-footwear {
+	background-color: #000000;
+}
+
 .filters {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	background-color: #000000;
 	opacity: .9;
 }
 
@@ -465,19 +476,18 @@ a {
 .catalog-blocs-nixon h3 {
 	letter-spacing: 0.63px;
 	margin: 0;
-	margin-bottom: 35px;
+	margin-bottom: 30px;
 }
 
 .col-1 .catalog-blocs-nixon {
 	background-color: #333;
-	padding: 35px 20px 65px 20px;
-	box-sizing: border-box;
+	padding: 35px 20px 62px 20px;
 }
 
 .col-1 .catalog-blocs-nixon img {
 	padding: 0;
 	margin: 0;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 
 .col-1 .catalog-blocs-jacket {
@@ -500,39 +510,38 @@ a {
 	margin-left: 10px;
 }
 
-.col-2 .catalog-blocs-item,
-.col-1 .catalog-blocs-nixon {
-	justify-content: flex-start;
-}
-
-.col-2 .catalog-blocs-balmain {
+.col-2 .catalog-blocs-description {
 	flex-direction: row;
 }
 
-.catalog-blocs-balmain div {
+.catalog-blocs-description div {
 	width: 50%;
 }
 
-.catalog-balmain-description {
+.catalog-description {
 	padding-right: 27px;
 	padding-left: 30px;
 	box-sizing: border-box;
+	position: relative;
 }
 
-.catalog-balmain-description .description {
+.catalog-description .description {
 	font-size: 12px;
 	line-height: 20px;
 }
 
-.catalog-balmain-description span,
+.catalog-description span,
 .catalog-blocs-jacket h3,
 .button-basket,
-.catalog-blocs-nixon h3 {
+.catalog-blocs-nixon h3,
+.footwear-exclusive,
+.footwear-news,
+.footwear-size {
 	font-size: 14px;
 	font-weight: 500;
 }
 
-.catalog-balmain-description span {
+.catalog-description span {
 	display: block;
 	margin-bottom: 15px;
 }
@@ -551,7 +560,8 @@ a {
 	margin-bottom: 20px;
 }
 
-.catalog-blocs-item {
+.catalog-blocs-item,
+.footwear-item {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -559,28 +569,47 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 100%;
+	min-height: 430px;
 	background: #fff;
-	justify-content: flex-end;
+	padding: 0 20px;
+	box-sizing: border-box;
+	position: relative;
 }
 
-.catalog-blocs-item img {
-	margin-bottom: 45px;
+.product-picture {
+	min-height: 265px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 39px;
 }
 
-.col-1 img {
-	padding-top: 120px;
+.product-picture-item {
+	margin: 0;
+	line-height: 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
 }
 
-.catalog-blocs-item h2 {
-	margin-bottom: 15px;
+.catalog-blocs-item h2,
+.footwear-item h2 {
+	margin-bottom: 10px;
 }
 
-.catalog-blocs-item .description {
-	margin-bottom: 25px;
+.catalog-blocs-item .description,
+.footwear-item .description {
+	margin-bottom: 20px;
 }
 
-.catalog-blocs-item  .price {
+.catalog-blocs-item .price,
+.footwear-item .price {
 	margin-bottom: 30px;
 }
 
@@ -602,13 +631,43 @@ a {
 	flex-basis: calc(100% / 5)
 }
 
+.col-1 .advertising {
+	padding: 0;
+}
+
+.advertising .advertising-new,
+.advertising .advertising-heading {
+	position: absolute;
+	color: #fff;
+	margin: 0;
+	text-align: center;
+}
+
+.advertising .advertising-new {
+	top: 37px;
+}
+
+.advertising .advertising-heading {
+	font-size: 55px;
+	top: 86px;
+	line-height: 50px;
+}
+
+.inner-page-footwear .col-1 {
+	flex-basis: calc(100% / 4)
+}
+
 .col-2 {
 	flex-basis: calc(100% / 5 * 2)
 }
 
+.inner-page-footwear .col-2 {
+	flex-basis: calc(100% / 4 * 2)
+}
+
 .catalog-blocs-nixon .description {
 	line-height: 25px;
-	margin-bottom: 30px;
+	margin-bottom: 27px;
 }
 
 .catalog-blocs-raf img {
@@ -621,6 +680,8 @@ a {
 
 .blocs-balmain-picture {
 	height: 100%;
+	line-height: 0;
+	align-self: flex-end;
 }
 
 .blocs-balmain-picture img {
@@ -636,6 +697,9 @@ a {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 150px;
 }
 
 .product-characteristic {
@@ -647,7 +711,7 @@ a {
 	flex-direction: column;
 }
 
-.product-characteristic h1,
+.product-characteristic-heading,
 .basket h2 {
 	margin: 0;
 	padding: 0;
@@ -655,11 +719,35 @@ a {
 	font-weight: 500;
 }
 
-.product-characteristic h1 {
+.product-characteristic-heading {
 	line-height: 24px;
+	margin-bottom: 12px;
 }
 
-.product-characteristic h1 span,
+.product-characteristic .price {
+	margin-bottom: 20px;
+}
+
+.product-characteristic .colors {
+	margin-bottom: 12px;
+}
+
+.product-characteristic .model-list {
+	margin: 0;
+	line-height: 0;
+	margin-bottom: 18px;
+}
+
+.model-item {
+	display: inline-block;
+	line-height: 0;
+}
+
+.model-item:first-child {
+	margin-right: 10px;
+}
+
+.product-characteristic-heading span,
 .description-product h2,
 .story-advantages h3,
 .box-product h2,
@@ -670,36 +758,57 @@ a {
 	font-weight: 500;
 }
 
-.inner-page-product .price,
-.inner-page-product .colors {
-	color: #666666;
-	margin: 0;
+.product-characteristic-heading span {
+	margin-bottom: 12px;
 }
 
 .grid-size {
 	border: none;
 	padding: 0;
+	margin: 0;
 }
 
 .grid-size legend {
 	font-family: "Roboto-light", Arial, sans-serif;
 	font-size: 12px;
-	line-height: 35px;
 	font-weight: 300;
 	text-transform: none;
 	color: #666666;
+	margin-bottom: 13px;
+}
+
+.footwear-size {
+	color: #666666;
+	text-transform: uppercase;
+	-webkit-appearance: none;
+	background: url(../img/arrow-down-page.svg) no-repeat 81% 48%;
+	padding: 17px 83px 17px 19px;
+	line-height: 14px;
+	margin-right: 10px;
+}
+
+.add-basket {
+	color: #ffffff;
+	padding: 18px 30px;
+	background-color: #000;
+	display: inline-block;
+	line-height: 14px;
 }
 
 .description-product {
 	width: 100%;
-	padding: 260px 0;
+	min-height: 450px;
+	padding: 105px 0;
 	background: url(../img/page-product-bg.png) no-repeat;
 	background-size: cover;
 	color: #ffffff;
+	display: flex;
+	align-items: center;
 }
 
 .description-product h2 {
 	margin: 0;
+	margin-bottom: 20px;
 }
 
 .description-product p {
@@ -712,6 +821,8 @@ a {
 	background: url("../img/page-product-bg-1.png") no-repeat;
 	background-size: cover;
 	padding-bottom: 200px;
+	padding: 105px 0;
+	min-height: 450px;
 }
 
 .advantages-wrapper {
@@ -725,6 +836,7 @@ a {
 
 .advantages-wrapper h3 {
 	margin: 0;
+	margin-bottom: 20px;
 }
 
 .story-advantages p,
@@ -733,9 +845,19 @@ a {
 	margin: 0;
 }
 
-.story-description {
+.advantages-wrapper .subtitle-advantages,
+.social-product .subtitle-advantages {
+	margin-bottom: 5px;
+}
+
+.story-advantages .story-description {
 	width: 42%;
 	line-height: 25px;
+	margin-bottom: 40px;
+}
+
+.advantages-list {
+	margin-top: 20px;
 }
 
 .box-product {
@@ -749,6 +871,22 @@ a {
 	box-sizing: border-box;
 	border: 4px solid #e4e4e4;
 	width: 300px;
+	flex-shrink: 0;
+	background-color: #fff;
+}
+
+.box-product h2 {
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.box-product-model {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+.box-product img {
+	padding: 50px 0;
 }
 
 .stock-price {
@@ -760,6 +898,17 @@ a {
 	display: -o-flex;
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.social-product {
+	min-height: 450px;
+	padding: 105px 0;
+}
+
+.social-product h3 {
+	margin: 0;
+	margin-bottom: 40px;
 }
 
 .social-picture {
@@ -775,10 +924,26 @@ a {
 	opacity: .4;
 }
 
+.inner-page-product .favourites {
+	display: block;
+	padding: 16px 17px;
+	border: 1px solid #e4e4e4;
+	font-size: 0;
+	line-height: 0;
+	width: 16px;
+	height: 14px;
+	background: url(../img/heart-page.svg) no-repeat center;
+	margin-bottom: 42px;
+}
+
 /*Стилизация страницы Эксклюзивных товаров*/
 
 .inner-page-exclusive .filters-sorting {
 	margin-bottom: 110px;
+}
+
+.inner-page-footwear .filters-sorting {
+	margin-bottom: 40px;
 }
 
 .container-inner {
@@ -823,8 +988,20 @@ a {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	padding-top: 120px;
 	background: #f2f9fd;
+	min-height: 530px;
+	box-sizing: border-box;
+}
+
+.picture-item {
+	height: 333px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 40px;
 }
 
 .exclusive-item-wrapper h2 {
@@ -832,12 +1009,8 @@ a {
 	margin-bottom: 10px;
 }
 
-.exclusive-item-wrapper img {
-	margin-bottom: 40px;
-}
-
 .exclusive-item-wrapper .price {
-	margin-bottom: 70px;
+	margin-bottom: 58px;
 }
 
 .location {
@@ -854,19 +1027,19 @@ a {
 
 .exclusive-item .fixed-picture-right {
 	position: absolute;
-	right: -50%;
-	top: calc(50% - 241px);
+	right: -51%;
+	top: calc(50% - 270px);
 }
 
 .exclusive-item .fixed-picture-left {
 	position: absolute;
-	left: -53%;
-	top: calc(50% - 233px);
+	left: -54%;
+	top: calc(50% - 270px);
 }
 
 .exclusive-item .supreme {
-	right: -28%;
-	top: calc(50% - 173px);
+	right: -40%;
+	top: calc(50% - 285px);
 }
 
 .exclusive-item .pick {
@@ -874,25 +1047,7 @@ a {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
-
-.exclusive-item-wrapper+.pick::after {
-	content: "";
-	position: absolute;
-	border: 10px solid #f2f9fd;
-	width: 530px;
-	height: 530px;
-	z-index: -1;
-}
-
-.exclusive-item-right+.pick::after {
-	right: -43%;
-	top: -3%;
-}
-
-.exclusive-item-left+.pick::after {
-	left: -43%;
-	top: 0;
+	z-index: 3;
 }
 
 .pick h2 {
@@ -908,7 +1063,7 @@ a {
 .pick .divider {
 	font-size: 25px;
 	display: block;
-	margin: 5px 0;
+	margin: 15px 0;
 }
 
 .exclusive-item .description {
@@ -1160,5 +1315,49 @@ a {
 .footwear-exclusive,
 .footwear-news {
 	position: absolute;
-	opacity: 0;
+	top: 33px;
+	left: calc(50% - 37px);
+	color: #fff;
+	line-height: 20px;
+	padding: 0 14px;
+	border-radius: 10px;
+}
+
+.footwear-exclusive {
+	background-color: #0089cf;
+}
+
+.footwear-news {
+	background-color: #83d78c;
+}
+
+.catalog-description .footwear-news {
+	left: 30px;
+	top: calc(0% - 70px);
+}
+
+.exclusive-favorites,
+.exclusive-basket {
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	width: 16px;
+	height: 14px;
+	top: 36px;
+}
+
+.exclusive-favorites {
+	background: url(../img/heart.svg) no-repeat center;
+	left: 33px;
+}
+
+.exclusive-basket {
+	background: url(../img/footwear-basket.svg) no-repeat center;
+	right: 33px;
+}
+
+/*Стилизация фильтра footwear*/
+
+.filter-input:checked label {
+	padding-left: 20px;
 }
