@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Интернет-магазин Bree-ecom</title>
 </head>
-<body class="inner-page-footwear">
+<body class="inner-page-footwear" id="filters">
 	<header class="main-header">
 		<nav class="main-navigation">
 			<a href="#0" class="header-logo">Логотип Bree-ecom</a>
@@ -312,146 +312,164 @@
 		</section>
 		<p class="copyright">Copyright © 2015 Bree Orthonormai. All rights reserved.</p>
 	</footer>
-	<button class="filter-button">Фильтр</button>
+	<a href="#filters" class="filter-button filter-button-off">Фильтр</a>
 	<div class="filters-footwear">
-		<form class="filters container" action="#0" method="post">
-			<fieldset class="filter-shoes">
-				<input class="filter-input visually-hidden" id="boat-shoes" name="boat-shoes" type="checkbox">
-				<input class="filter-input visually-hidden" id="moccasins" name="moccasins" type="checkbox">
-				<input class="filter-input visually-hidden" id="boots" name="boots" type="checkbox">
-				<input class="filter-input visually-hidden" id="espadrilles" name="espadrilles" type="checkbox">
-				<input class="filter-input visually-hidden" id="lace-ups" name="lace-ups" type="checkbox">
-				<input class="filter-input visually-hidden" id="loafers" name="loafers" type="checkbox">
-				<input class="filter-input visually-hidden" id="monkstraps" name="monkstraps" type="checkbox">
-				<input class="filter-input visually-hidden" id="sandals" name="sandals" type="checkbox">
-				<input class="filter-input visually-hidden" id="sneakers" name="sneakers" type="checkbox">
-				<legend>shoes</legend>
-				<label for="boat-shoes">boat shoes</label>
-				<label for="moccasins">moccasins</label>
-				<label for="boots">boots</label>
-				<label for="espadrilles">espadrilles</label>
-				<label for="lace-ups">lace ups</label>
-				<label for="loafers">loafers</label>
-				<label for="monkstraps">monkstraps</label>
-				<label for="sandals">sandals</label>
-				<label for="sneakers">sneakers</label>
-			</fieldset>
-			<div class="size-colors-wrapper">
-				<fieldset class="filter-size">
-					<input type="checkbox" class="filter-input visually-hidden" id="4" name="4">
-					<input type="checkbox" class="filter-input visually-hidden" id="5" name="5">
-					<input type="checkbox" class="filter-input visually-hidden" id="6" name="6">
-					<input type="checkbox" class="filter-input visually-hidden" id="7" name="7">
-					<input type="checkbox" class="filter-input visually-hidden" id="7.5" name="7.5">
-					<input type="checkbox" class="filter-input visually-hidden" id="8" name="8">
-					<input type="checkbox" class="filter-input visually-hidden" id="8.5" name="8.5">
-					<input type="checkbox" class="filter-input visually-hidden" id="9" name="9">
-					<input type="checkbox" class="filter-input visually-hidden" id="9.5" name="9.5">
-					<input type="checkbox" class="filter-input visually-hidden" id="10" name="10">
-					<input type="checkbox" class="filter-input visually-hidden" id="10.5" name="10.5">
-					<input type="checkbox" class="filter-input visually-hidden" id="11" name="11">
-					<input type="checkbox" class="filter-input visually-hidden" id="12" name="12">
-					<legend>size</legend>
-					<label for="4">4</label>
-					<label for="5">5</label>
-					<label for="6">6</label>
-					<label for="7">7</label>
-					<label for="7.5">7.5</label>
-					<label for="8">8</label>
-					<label for="8.5">8.5</label>
-					<label for="9">9</label>
-					<label for="9.5">9.5</label>
-					<label for="10">10</label>
-					<label for="10.5">10.5</label>
-					<label for="11">11</label>
-					<label for="12">12</label>	
-				</fieldset>
-				<fieldset class="filter-colors">
-					<input type="checkbox" class="filter-input visually-hidden" id="pink" name="pink">
-					<input type="checkbox" class="filter-input visually-hidden" id="violet" name="violet">
-					<input type="checkbox" class="filter-input visually-hidden" id="blue" name="blue">
-					<input type="checkbox" class="filter-input visually-hidden" id="yellow" name="yellow">
-					<input type="checkbox" class="filter-input visually-hidden" id="orange" name="orange">
-					<input type="checkbox" class="filter-input visually-hidden" id="brown" name="brown">
-					<input type="checkbox" class="filter-input visually-hidden" id="red" name="red">
-					<input type="checkbox" class="filter-input visually-hidden" id="grey" name="grey">
-					<input type="checkbox" class="filter-input visually-hidden" id="white" name="white">
-					<input type="checkbox" class="filter-input visually-hidden" id="black" name="black">
-					<legend>colors</legend>
-					<label for="pink">pink</label>
-					<label for="violet">violet</label>
-					<label for="blue">blue</label>
-					<label for="yellow">yellow</label>
-					<label for="orange">orange</label>
-					<label for="brown">brown</label>
-					<label for="red">red</label>
-					<label for="grey">grey</label>
-					<label for="white">white</label>
-					<label for="black">black</label>
-				</fieldset>
+		<div class="container">
+			<form class="filters" action="#0" method="post">
+				<div class="filters-list row">
+					<div class="col-1">
+						<fieldset class="filter-shoes">
+							<input class="filter-input visually-hidden" id="boat-shoes" name="boat-shoes" type="checkbox">
+							<input class="filter-input visually-hidden" id="moccasins" name="moccasins" type="checkbox">
+							<input class="filter-input visually-hidden" id="boots" name="boots" type="checkbox">
+							<input class="filter-input visually-hidden" id="espadrilles" name="espadrilles" type="checkbox">
+							<input class="filter-input visually-hidden" id="lace-ups" name="lace-ups" type="checkbox">
+							<input class="filter-input visually-hidden" id="loafers" name="loafers" type="checkbox">
+							<input class="filter-input visually-hidden" id="monkstraps" name="monkstraps" type="checkbox">
+							<input class="filter-input visually-hidden" id="sandals" name="sandals" type="checkbox">
+							<input class="filter-input visually-hidden" id="sneakers" name="sneakers" type="checkbox">
+							<legend>shoes</legend>
+							<label for="boat-shoes">boat shoes</label>
+							<label for="moccasins">moccasins</label>
+							<label for="boots">boots</label>
+							<label for="espadrilles">espadrilles</label>
+							<label for="lace-ups">lace ups</label>
+							<label for="loafers">loafers</label>
+							<label for="monkstraps">monkstraps</label>
+							<label for="sandals">sandals</label>
+							<label for="sneakers">sneakers</label>
+						</fieldset>
+					</div>
+					<div class="col-1">
+						<div class="size-colors-wrapper">
+							<fieldset class="filter-size">
+								<input type="checkbox" class="filter-input visually-hidden" id="4" name="4">
+								<input type="checkbox" class="filter-input visually-hidden" id="5" name="5">
+								<input type="checkbox" class="filter-input visually-hidden" id="6" name="6">
+								<input type="checkbox" class="filter-input visually-hidden" id="7" name="7">
+								<input type="checkbox" class="filter-input visually-hidden" id="7.5" name="7.5">
+								<input type="checkbox" class="filter-input visually-hidden" id="8" name="8">
+								<input type="checkbox" class="filter-input visually-hidden" id="8.5" name="8.5">
+								<input type="checkbox" class="filter-input visually-hidden" id="9" name="9">
+								<input type="checkbox" class="filter-input visually-hidden" id="9.5" name="9.5">
+								<input type="checkbox" class="filter-input visually-hidden" id="10" name="10">
+								<input type="checkbox" class="filter-input visually-hidden" id="10.5" name="10.5">
+								<input type="checkbox" class="filter-input visually-hidden" id="11" name="11">
+								<input type="checkbox" class="filter-input visually-hidden" id="12" name="12">
+								<legend>size</legend>
+								<div class="filter-size-wrapper">
+									<label for="4">4</label>
+									<label for="5">5</label>
+									<label for="6">6</label>
+									<label for="7">7</label>
+									<label for="7.5">7.5</label>
+									<label for="8">8</label>
+									<label for="8.5">8.5</label>
+									<label for="9">9</label>
+									<label for="9.5">9.5</label>
+									<label for="10">10</label>
+									<label for="10.5">10.5</label>
+									<label for="11">11</label>
+									<label for="12">12</label>
+								</div>
+							</fieldset>
+							<fieldset class="filter-colors">
+								<input type="checkbox" class="filter-input visually-hidden" id="pink" name="pink">
+								<input type="checkbox" class="filter-input visually-hidden" id="violet" name="violet">
+								<input type="checkbox" class="filter-input visually-hidden" id="blue" name="blue">
+								<input type="checkbox" class="filter-input visually-hidden" id="yellow" name="yellow">
+								<input type="checkbox" class="filter-input visually-hidden" id="orange" name="orange">
+								<input type="checkbox" class="filter-input visually-hidden" id="brown" name="brown">
+								<input type="checkbox" class="filter-input visually-hidden" id="red" name="red">
+								<input type="checkbox" class="filter-input visually-hidden" id="grey" name="grey">
+								<input type="checkbox" class="filter-input visually-hidden" id="white" name="white">
+								<input type="checkbox" class="filter-input visually-hidden" id="black" name="black">
+								<legend>colors</legend>
+								<div class="filter-colors-wrapper">
+									<label for="pink">pink</label>
+									<label for="violet">violet</label>
+									<label for="blue">blue</label>
+									<label for="yellow">yellow</label>
+									<label for="orange">orange</label>
+									<label for="brown">brown</label>
+									<label for="red">red</label>
+									<label for="grey">grey</label>
+									<label for="white">white</label>
+									<label for="black">black</label>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+					<div class="col-2">
+						<fieldset class="filter-brands">
+							<input type="checkbox" class="filter-input visually-hidden" id="a.p.c." name="a.p.c.">
+							<input type="checkbox" class="filter-input visually-hidden" id="acne studios" name="acne-studios">
+							<input type="checkbox" class="filter-input visually-hidden" id="adidas originals" name="adidas-originals">
+							<input type="checkbox" class="filter-input visually-hidden" id="arc'teryx veilance" name="arc'teryx-veilance">
+							<input type="checkbox" class="filter-input visually-hidden" id="bianca chandon" name="bianca-chandon">
+							<input type="checkbox" class="filter-input visually-hidden" id="cmmn swdn" name="cmmn-swdn">
+							<input type="checkbox" class="filter-input visually-hidden" id="comme des garcons" name="comme-des-garcons">
+							<input type="checkbox" class="filter-input visually-hidden" id="common projects" name="common-projects">
+							<input type="checkbox" class="filter-input visually-hidden" id="converse" name="converse">
+							<input type="checkbox" class="filter-input visually-hidden" id="culter and gross" name="culter-and-gross">
+							<input type="checkbox" class="filter-input visually-hidden" id="dime" name="dime">
+							<input type="checkbox" class="filter-input visually-hidden" id="engineered" name="engineered">
+							<input type="checkbox" class="filter-input visually-hidden" id="garments" name="garments">
+							<input type="checkbox" class="filter-input visually-hidden" id="eytys" name="eytys">
+							<input type="checkbox" class="filter-input visually-hidden" id="kris van assche" name="kris-van-assche">
+							<input type="checkbox" class="filter-input visually-hidden" id="maison margiela" name="maison-margiela">
+							<input type="checkbox" class="filter-input visually-hidden" id="new balance" name="new-balance">
+							<input type="checkbox" class="filter-input visually-hidden" id="nike" name="nike">
+							<input type="checkbox" class="filter-input visually-hidden" id="our legacy" name="our-legacy">
+							<input type="checkbox" class="filter-input visually-hidden" id="proper gang" name="proper-gang">
+							<input type="checkbox" class="filter-input visually-hidden" id="puma" name="puma">
+							<input type="checkbox" class="filter-input visually-hidden" id="raf simons" name="raf-simons">
+							<input type="checkbox" class="filter-input visually-hidden" id="rick owens" name="rick-owens">
+							<input type="checkbox" class="filter-input visually-hidden" id="supreme" name="supreme">
+							<input type="checkbox" class="filter-input visually-hidden" id="undercover" name="undercover">
+							<input type="checkbox" class="filter-input visually-hidden" id="vans" name="vans">
+							<input type="checkbox" class="filter-input visually-hidden" id="visvim" name="visvim">
+							<input type="checkbox" class="filter-input visually-hidden" id="wtaps" name="wtaps">
+							<input type="checkbox" class="filter-input visually-hidden" id="y-3" name="y-3">
+							<div class="filter-brands-item">
+								<legend>brands</legend>
+								<div class="filter-brands-wrapper">
+									<label for="a.p.c.">a.p.c.</label>
+									<label for="acne studios">acne studios</label>
+									<label for="adidas originals">adidas originals</label>
+									<label for="arc'teryx veilance">arc'teryx veilance</label>
+									<label for="bianca chandon">bianca chandon</label>
+									<label for="cmmn swdn">cmmn swdn</label>
+									<label for="comme des garcons">comme des garcons</label>
+									<label for="common projects">common projects</label>
+									<label for="converse">converse</label>
+									<label for="culter and gross">culter and gross</label>
+									<label for="dime">dime</label>
+									<label for="engineered">engineered</label>
+									<label for="garments">garments</label>
+									<label for="eytys">eytys</label>
+									<label for="kris van assche">kris van assche</label>
+									<label for="maison margiela">maison margiela</label>
+									<label for="new balance">new balance</label>
+									<label for="nike">nike</label>
+									<label for="our legacy">our legacy</label>
+									<label for="proper gang">proper gang</label>
+									<label for="puma">puma</label>
+									<label for="raf simons">raf simons</label>
+									<label for="rick owens">rick owens</label>
+									<label for="supreme">supreme</label>
+									<label for="undercover">undercover</label>
+									<label for="vans">vans</label>
+									<label for="visvim">visvim</label>
+									<label for="wtaps">wtaps</label>	
+									<label for="y-3">y-3</label>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+				<button class="filter-button filter-button-on" type="submit">Отправить</button>
 			</div>
-			<fieldset class="filter-brands">
-				<input type="checkbox" class="filter-input visually-hidden" id="a.p.c." name="a.p.c.">
-				<input type="checkbox" class="filter-input visually-hidden" id="acne studios" name="acne-studios">
-				<input type="checkbox" class="filter-input visually-hidden" id="adidas originals" name="adidas-originals">
-				<input type="checkbox" class="filter-input visually-hidden" id="arc'teryx veilance" name="arc'teryx-veilance">
-				<input type="checkbox" class="filter-input visually-hidden" id="bianca chandon" name="bianca-chandon">
-				<input type="checkbox" class="filter-input visually-hidden" id="cmmn swdn" name="cmmn-swdn">
-				<input type="checkbox" class="filter-input visually-hidden" id="comme des garcons" name="comme-des-garcons">
-				<input type="checkbox" class="filter-input visually-hidden" id="common projects" name="common-projects">
-				<input type="checkbox" class="filter-input visually-hidden" id="converse" name="converse">
-				<input type="checkbox" class="filter-input visually-hidden" id="culter and gross" name="culter-and-gross">
-				<input type="checkbox" class="filter-input visually-hidden" id="dime" name="dime">
-				<input type="checkbox" class="filter-input visually-hidden" id="engineered" name="engineered">
-				<input type="checkbox" class="filter-input visually-hidden" id="garments" name="garments">
-				<input type="checkbox" class="filter-input visually-hidden" id="eytys" name="eytys">
-				<input type="checkbox" class="filter-input visually-hidden" id="kris van assche" name="kris-van-assche">
-				<input type="checkbox" class="filter-input visually-hidden" id="maison margiela" name="maison-margiela">
-				<input type="checkbox" class="filter-input visually-hidden" id="new balance" name="new-balance">
-				<input type="checkbox" class="filter-input visually-hidden" id="nike" name="nike">
-				<input type="checkbox" class="filter-input visually-hidden" id="our legacy" name="our-legacy">
-				<input type="checkbox" class="filter-input visually-hidden" id="proper gang" name="proper-gang">
-				<input type="checkbox" class="filter-input visually-hidden" id="puma" name="puma">
-				<input type="checkbox" class="filter-input visually-hidden" id="raf simons" name="raf-simons">
-				<input type="checkbox" class="filter-input visually-hidden" id="rick owens" name="rick-owens">
-				<input type="checkbox" class="filter-input visually-hidden" id="supreme" name="supreme">
-				<input type="checkbox" class="filter-input visually-hidden" id="undercover" name="undercover">
-				<input type="checkbox" class="filter-input visually-hidden" id="vans" name="vans">
-				<input type="checkbox" class="filter-input visually-hidden" id="visvim" name="visvim">
-				<input type="checkbox" class="filter-input visually-hidden" id="wtaps" name="wtaps">
-				<input type="checkbox" class="filter-input visually-hidden" id="y-3" name="y-3">
-				<legend>brands</legend>
-				<label for="a.p.c.">a.p.c.</label>
-				<label for="acne studios">acne studios</label>
-				<label for="adidas originals">adidas originals</label>
-				<label for="arc'teryx veilance">arc'teryx veilance</label>
-				<label for="bianca chandon">bianca chandon</label>
-				<label for="cmmn swdn">cmmn swdn</label>
-				<label for="comme des garcons">comme des garcons</label>
-				<label for="common projects">common projects</label>
-				<label for="converse">converse</label>
-				<label for="culter and gross">culter and gross</label>
-				<label for="dime">dime</label>
-				<label for="engineered">engineered</label>
-				<label for="garments">garments</label>
-				<label for="eytys">eytys</label>
-				<label for="kris van assche">kris van assche</label>
-				<label for="maison margiela">maison margiela</label>
-				<label for="new balance">new balance</label>
-				<label for="nike">nike</label>
-				<label for="our legacy">our legacy</label>
-				<label for="proper gang">proper gang</label>
-				<label for="puma">puma</label>
-				<label for="raf simons">raf simons</label>
-				<label for="rick owens">rick owens</label>
-				<label for="supreme">supreme</label>
-				<label for="undercover">undercover</label>
-				<label for="vans">vans</label>
-				<label for="visvim">visvim</label>
-				<label for="wtaps">wtaps</label>	
-				<label for="y-3">y-3</label>
-			</fieldset>
-			<button type="submit">Отправить</button>
 		</div>
 	</form>
 </body>
