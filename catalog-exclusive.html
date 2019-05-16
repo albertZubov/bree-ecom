@@ -71,52 +71,18 @@
 		<nav class="main-navigation">
 			<a href="#0" class="header-logo">Логотип Bree-ecom</a>
 			<ul class="site-navigation">
-				<li><a href="#0">footwear</a></li>
+				<li><a href="catalog-footwear.html">footwear</a></li>
 				<li><a href="#0">clothing</a></li>
 				<li><a href="#0">acessories</a></li>
-				<li><a href="#0">brands</a></li>
+				<li><a>brands</a></li>
 				<li><a href="#0">clearance</a></li>
 			</ul>
 			<ul class="user-navigation">
 				<li class="search-link">
 					<a href="#0" class="search-link-icon">search</a>
-						<!-- <form class="search-form" action="#0" method="post">
-							<p><span>search on bree</span>Start typing</p>
-							<input name="search" placeholder="search of goods" type="search">
-							<button type="submit">Поиск</button>
-						</form>
-					<div class="found-products">
-						<p>footwear<span>(3)</span></p>
-						<ul>
-							<li>
-								<img src="img/search-product-1.png" alt="Кроссовки raf simons x adidas" width="280" height="430">
-								<h3>raf simons x adidas</h3>
-								<p class="description">Mid - Platform Light-Up</p>
-								<p class="price">760.00</p>
-							</li>
-							<li>
-								<img src="img/search-product-2.png" alt="Кроссовки raf simons x adidas" width="271" height="180">
-								<h3>raf simons x adidas</h3>
-								<p class="description">Stan smith classic</p>
-								<p class="price">300.00</p>
-							</li>
-							<li>
-								<img src="img/search-product-3.png" alt="Кроссовки raf simons" width="227" height="303">
-								<h3>raf simons</h3>
-								<p class="description">Hi top velcro straps</p>
-								<p class="price">788.00</p>
-							</li>
-							<li>
-								<img src="img/search-product-4.png" alt="Кроссовки raf simons" width="228" height="145">
-								<h3>raf simons</h3>
-								<p class="description">Hi top velcro straps</p>
-								<p class="price">788.00</p>
-							</li>
-						</ul>
-					</div> -->
 				</li>
 				<li class="basket-link">
-					<a href="#basket" class="basket-link-icon">cart<span>(2)</span></a>
+					<a href="#basket" class="basket-link-icon">cart<span class="basket-quantity-goods">(2)</span></a>
 				</li>
 				<li class="login-link">
 					<a class="login-link-icon" href="#0">sign in</a>
@@ -125,6 +91,61 @@
 		</nav>		
 	</header>
 	<main class="main-contents">
+		<div class="search">
+			<div class="container">
+				<form class="search-form" action="#0" method="post">
+					<p class="source-search"><span class="search-start-heading">search on bree</span><span class="search-start">Start typing</span></p>
+					<button class="btn-close-form" type="button">Закрыть форму поиска</button>
+					<input name="search" placeholder="search of goods" type="search">
+					<button class="btn-search" type="submit">Поиск</button>
+				</form>
+				<div class="found-products">
+					<p class="quantity-found-goods">footwear<span>(3)</span></p>
+					<ul class="found-products-list row">
+						<li class="col-1">
+							<div class="found-products-item">
+								<div class="product-picture">
+									<img src="img/search-product-1.png" alt="Кроссовки raf simons x adidas" width="222" height="113">
+								</div>
+								<h2>raf simons x adidas</h2>
+								<p class="description">Mid - Platform Light-Up</p>
+								<p class="price">760.00</p>
+							</div>
+						</li>
+						<li class="col-1">
+							<div class="found-products-item">
+								<div class="product-picture">
+									<img src="img/search-product-2.png" alt="Кроссовки raf simons x adidas" width="225" height="105">
+								</div>
+								<h2>raf simons x adidas</h2>
+								<p class="description">Stan smith classic</p>
+								<p class="price">300.00</p>
+							</div>
+						</li>
+						<li class="col-1">
+							<div class="found-products-item">
+								<div class="product-picture">
+									<img src="img/search-product-3.png" alt="Кроссовки raf simons" width="226" height="146">
+								</div>
+								<h2>raf simons</h2>
+								<p class="description">Hi top velcro straps</p>
+								<p class="price">788.00</p>
+							</div>
+						</li>
+						<li class="col-1">
+							<div class="found-products-item">
+								<div class="product-picture">
+									<img src="img/search-product-4.png" alt="Кроссовки raf simons" width="228" height="145">
+								</div>
+								<h2>raf simons</h2>
+								<p class="description">Hi top velcro straps</p>
+								<p class="price">788.00</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<section class="catalog-product container">
 			<h1>exclusive</h1>
 			<p class="quantity-product"><a href="#0">38 products</a></p>
@@ -139,7 +160,7 @@
 			<ul class="exclusive-list container-inner">
 				<li class="exclusive-item">
 					<div class="picture location">
-						<img src="img/exclusive-product-1.png" alt="Эксклюзивный товар kith" witgh="780" height="530">
+						<img src="img/exclusive-product-1.png" alt="Эксклюзивный товар kith" witgh="412" height="401">
 					</div>
 					<div class="pick">
 						<h2><a href="#0">kith</a></h2>
@@ -151,7 +172,7 @@
 					<div class="exclusive-item-wrapper exclusive-item-right">
 						<div class="picture">
 							<div class="picture-item">
-								<img src="img/exclusive-product-2.jpg" alt="Эксклюзивный товар lanvin" witgh="352" height="211">
+								<img src="img/exclusive-product-2.jpg" alt="Эксклюзивный товар lanvin" witgh="380" height="211">
 							</div>
 							<h2><a href="#0">lanvin</a></h2>
 							<p class="description">Purple Metallic High-Top</p>
@@ -163,11 +184,11 @@
 						<p class="description">Classics Astor MA-1  Jacket - Burgundy</p>
 						<p class="price">220.00</p>
 					</div>
-					<img class="fixed-picture-right" src="img/exclusive-product-3.png" alt="Эксклюзивный товар stampd" witgh="889" height="621">
+					<img class="fixed-picture-right" src="img/exclusive-product-3.png" alt="Эксклюзивный товар stampd" witgh="616" height="530">
 				</li>
 				<li class="exclusive-item">
 					<div class="picture">
-						<img src="img/exclusive-product-4.png" alt="Эксклюзивный товар kith" witgh="800" height="530">
+						<img src="img/exclusive-product-4.png" alt="Эксклюзивный товар kith" witgh="412" height="377">
 					</div>
 					<div class="pick">
 						<h2><a href="#0">kith</a></h2>
@@ -179,7 +200,7 @@
 					<div class="exclusive-item-wrapper exclusive-item-left location">
 						<div class="picture">
 							<div class="picture-item">
-								<img src="img/exclusive-product-6.jpg" alt="Эксклюзивный товар raf simons" witgh="380" height="530">
+								<img src="img/exclusive-product-6.jpg" alt="Эксклюзивный товар raf simons" witgh="380" height="211">
 							</div>
 							<h2><a href="#0">raf simons</a></h2>
 							<p class="description">Black Velcro High-Top</p>
@@ -191,11 +212,11 @@
 						<p class="description">Lil jacket - Polka Dot / Red</p>
 						<p class="price">1.000.00</p>
 					</div>
-					<img class="fixed-picture-left" src="img/exclusive-product-5.png" alt="Эксклюзивный товар adidas originals x pharrell" witgh="804" height="568">
+					<img class="fixed-picture-left" src="img/exclusive-product-5.png" alt="Эксклюзивный товар adidas originals x pharrell" witgh="643" height="530">
 				</li>
 				<li class="exclusive-item">
 					<div class="picture location">
-						<img src="img/exclusive-product-7.png" alt="Эксклюзивный товар kith x ones stroke ueno" witgh="780" height="530">
+						<img src="img/exclusive-product-7.png" alt="Эксклюзивный товар kith x ones stroke ueno" witgh="412" height="480">
 					</div>
 					<div class="pick">
 						<h2><a href="#0">kith <span class="divider">x</span>ones stroke ueno</a></h2>
@@ -207,7 +228,7 @@
 					<div class="exclusive-item-wrapper exclusive-item-right">
 						<div class="picture">
 							<div class="picture-item">
-								<img src="img/exclusive-product-8.jpg" alt="Эксклюзивный товар raf simons" witgh="351" height="240">
+								<img src="img/exclusive-product-8.jpg" alt="Эксклюзивный товар raf simons" witgh="380" height="240">
 							</div>
 							<h2><a href="#0">raf simons</a></h2>
 							<p class="description">Black Leather Heel Pocket High-Top</p>
@@ -219,7 +240,7 @@
 						<p class="description">Child of hell Beanie</p>
 						<p class="price">40.00</p>
 					</div>
-					<img class="fixed-picture-right supreme" src="img/exclusive-product-9.png" alt="Эксклюзивный товар supreme" witgh="275" height="346">
+					<img class="fixed-picture-right supreme" src="img/exclusive-product-9.png" alt="Эксклюзивный товар supreme" witgh="530" height="530">
 				</li>
 			</ul>
 			<p class="loading">loading</p>
@@ -230,10 +251,10 @@
 			<a href="#0" class="footer-logo">Логотип Bree-ecom</a>
 			<ul class="footer-catalog-list">
 				<li class="footer-catalog-item"><a href="#0">footwear</a></li>
-				<li class="footer-catalog-item"><a href="#0"></a>clothing</li>
-				<li class="footer-catalog-item"><a href="#0"></a>accessories</li>
-				<li class="footer-catalog-item"><a href="#0"></a>brands</li>
-				<li class="footer-catalog-item"><a href="#0"></a>clearance</li>
+				<li class="footer-catalog-item"><a href="#0">clothing</a></li>
+				<li class="footer-catalog-item"><a href="#0">accessories</a></li>
+				<li class="footer-catalog-item"><a href="#0">brands</a></li>
+				<li class="footer-catalog-item"><a href="#0">clearance</a></li>
 				<li class="footer-catalog-item"><a href="#0">about</a></li>
 				<li class="footer-catalog-item"><a href="#0">contacts us</a></li>
 				<li class="footer-catalog-item"><a href="#0">support</a></li>
@@ -256,5 +277,6 @@
 		</section>
 		<p class="copyright">Copyright © 2015 Bree Orthonormai. All rights reserved.</p>
 	</footer>
+	<script src="js/search.js"></script>
 </body>
 </html>

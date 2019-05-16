@@ -11,109 +11,18 @@
 		<nav class="main-navigation">
 			<a href="#0" class="header-logo">Логотип Bree-ecom</a>
 			<ul class="site-navigation">
-				<li><a href="#0">footwear</a></li>
+				<li><a href="catalog-footwear.html">footwear</a></li>
 				<li><a href="#0">clothing</a></li>
 				<li><a href="#0">acessories</a></li>
-				<li><a href="#0">brands</a></li>
+				<li><a href="catalog-exclusive.html">brands</a></li>
 				<li><a href="#0">clearance</a></li>
 			</ul>
 			<ul class="user-navigation">
 				<li class="search-link">
 					<a href="#0" class="search-link-icon">search</a>
-						<!-- <form class="search-form" action="#0" method="post">
-							<p><span>search on bree</span>Start typing</p>
-							<input name="search" placeholder="search of goods" type="search">
-							<button type="submit">Поиск</button>
-						</form>
-					<div class="found-products">
-						<p>footwear<span>(3)</span></p>
-						<ul>
-							<li>
-								<img src="img/search-product-1.png" alt="Кроссовки raf simons x adidas" width="280" height="430">
-								<h3>raf simons x adidas</h3>
-								<p class="description">Mid - Platform Light-Up</p>
-								<p class="price">760.00</p>
-							</li>
-							<li>
-								<img src="img/search-product-2.png" alt="Кроссовки raf simons x adidas" width="271" height="180">
-								<h3>raf simons x adidas</h3>
-								<p class="description">Stan smith classic</p>
-								<p class="price">300.00</p>
-							</li>
-							<li>
-								<img src="img/search-product-3.png" alt="Кроссовки raf simons" width="227" height="303">
-								<h3>raf simons</h3>
-								<p class="description">Hi top velcro straps</p>
-								<p class="price">788.00</p>
-							</li>
-							<li>
-								<img src="img/search-product-4.png" alt="Кроссовки raf simons" width="228" height="145">
-								<h3>raf simons</h3>
-								<p class="description">Hi top velcro straps</p>
-								<p class="price">788.00</p>
-							</li>
-						</ul>
-					</div> -->
 				</li>
 				<li class="basket-link">
-					<a href="#0" class="basket-link-icon">cart<span>(2)</span></a>
-					<form class="basket"action="#0" method="post">
-						<div class="informations-customer">
-							<h2>Informations</h2>
-							<fieldset class="personal-information">
-								<legend>personnal informations</legend>
-								<select name="country" size="1">
-									<option value="russia">Россия</option>
-									<option value="belarus">Беллорусия</option>
-									<option value="finland">Финляндия</option>
-								</select>
-								<div class="personal-information-wrapper">
-									<input type="text" placeholder="First name" name="first-name">
-									<input type="text" placeholder="Second name" name="second-name">
-									<input type="text" placeholder="Adress" name="adress">
-									<input type="text" placeholder="Postal code" name="postal-code">
-									<input type="text" placeholder="City" name="city">
-									<input type="email" placeholder="Email" name="email">
-									<input type="tel" placeholder="Phone" name="phone">
-								</div>
-							</fieldset>
-							<fieldset class="comment">
-								<legend>notes</legend>
-								<textarea name="note" rows="1" cols="30" placeholder="Note"></textarea>
-							</fieldset>
-							<fieldset class="delivery">
-								<legend>delivery mode</legend>
-								<select name="delivery" size="1">
-									<option value="collisimo-france">Collisimo france, &#36;20.00</option>
-									<option value="russian-post">Russian post, &#36;15.00</option>
-								</select>
-							</fieldset>
-						</div>
-						<div class="informations-products">
-							<fieldset class="products-basket">
-								<legend>your cart</legend>
-								<ul class="products-basket-list">
-									<li class="products-basket-item">
-										<p class="products-basket-quantity"><span>1</span><button class="more">Увеличить</button><button class="less">Уменьшить</button></p>
-										<img src="img/comme-basket.png" alt="Кроссовки comme des" width="55" height="31">
-										<p class="products-basket-description">comme des garcons play <span>Rod Laver Vintage - exlusive</span></p>
-										<p class="products-basket-price">size <span>7,5</span> &#36; 105.00</p>
-									</li>
-									<li class="products-basket-item">
-										<p class="products-basket-quantity"><span>1</span><button class="more">Увеличить</button><button class="less">Уменьшить</button></p>
-										<img src="img/nike-basket.png" alt="Кроссовки nike" width="55" height="26">
-										<p class="products-basket-description">nike <span>Air Max Tavas SD</span></p>
-										<p class="products-basket-price">size <span>7,5</span> &#36; 160.00</p>
-									</li>
-								</ul>
-								<p class="basket-sum-shipping">shipping<span>&#36; 20.00</span></p>
-								<p class="products-sum-subtotal">subtotal<span>&#36; 285.00</span></p>
-							</fieldset>
-							<input type="checkbox" name="consent-processing" class="visually-hidden" id="consent-processing">
-							<label class="consent" for="consent-processing">I agree <a href="#0">terms of use and privacy</a></label>
-							<button class="button button-basket" type="submit">confirm</button>
-						</div>
-					</form>
+					<a href="#0" class="basket-link-icon">cart<span class="basket-quantity-goods">(2)</span></a>
 				</li>
 				<li class="login-link">
 					<a class="login-link-icon" href="#0">sign in</a>
@@ -122,7 +31,7 @@
 		</nav>		
 	</header>
 	<main class="main-contents">
-		<section class="catalog-blocs container-blocs">
+		<section class="catalog-product-blocs container-blocs">
 			<h1 class="visually-hidden">Каталог продуков</h1>
 			<ul class="catalog-blocs-list row">
 				<li class="col-1">
@@ -164,7 +73,7 @@
 					<div class="catalog-blocs-item">	
 						<a href="#0" class="footwear-exclusive">exclusive</a>
 						<div class="product-picture">
-							<img src="img/blocs-product-4.png" alt="Кроссовки comme des garcons play" width="238" height="134">
+							<img src="img/blocs-product-4.png" alt="Кроссовки comme des garcons play" width="238" height="130">
 						</div>
 						<h2>comme des garcons play</h2>
 						<p class="description">Rod Laver Vintage - exclusive</p>
@@ -215,10 +124,10 @@
 			<a href="#0" class="footer-logo">Логотип Bree-ecom</a>
 			<ul class="footer-catalog-list">
 				<li class="footer-catalog-item"><a href="#0">footwear</a></li>
-				<li class="footer-catalog-item"><a href="#0"></a>clothing</li>
-				<li class="footer-catalog-item"><a href="#0"></a>accessories</li>
-				<li class="footer-catalog-item"><a href="#0"></a>brands</li>
-				<li class="footer-catalog-item"><a href="#0"></a>clearance</li>
+				<li class="footer-catalog-item"><a href="#0">clothing</a></li>
+				<li class="footer-catalog-item"><a href="#0">accessories</a></li>
+				<li class="footer-catalog-item"><a href="#0">brands</a></li>
+				<li class="footer-catalog-item"><a href="#0">clearance</a></li>
 				<li class="footer-catalog-item"><a href="#0">about</a></li>
 				<li class="footer-catalog-item"><a href="#0">contacts us</a></li>
 				<li class="footer-catalog-item"><a href="#0">support</a></li>
