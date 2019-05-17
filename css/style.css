@@ -891,6 +891,13 @@ a {
 	position: relative;
 }
 
+.catalog-blocs-item:hover,
+.footwear-product-item:hover,
+.found-products-item:hover {
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+	cursor: pointer;
+}
+
 .product-picture {
 	min-height: 265px;
 	display: -webkit-flex;
@@ -1030,7 +1037,7 @@ body .col-2 {
 
 .product-characteristic {
 	display: -webkit-flex;
-	display: -moz-flex;
+	display: -moz-flex; 
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
@@ -1265,6 +1272,11 @@ body .col-2 {
 	height: 14px;
 	background: url(../img/heart-page.svg) no-repeat center;
 	margin-bottom: 42px;
+	cursor: pointer;
+}
+
+.inner-page-product .favourites-check:checked ~ label {
+	background: url(../img/heart-page-check.svg) no-repeat center;\
 }
 
 /*Стилизация страницы Эксклюзивных товаров*/
@@ -1656,6 +1668,21 @@ body .col-2 {
 	border-radius: 10px;
 }
 
+.footwear-exclusive:hover,
+.footwear-news:hover {
+	padding-right: 35px;
+	padding-left: 35px;
+	transition: all .14s;
+}
+
+.footwear-exclusive:hover {
+	left: calc(50% - 58px);
+}
+
+.footwear-news:hover {
+	left: calc(50% - 48px);
+}
+
 .footwear-exclusive {
 	background-color: #0089cf;
 	left: calc(50% - 37px);
@@ -1669,6 +1696,10 @@ body .col-2 {
 .catalog-description .footwear-news {
 	left: 30px;
 	top: calc(0% - 60px);
+}
+
+.catalog-description .footwear-news:hover {
+	left: calc(0% + 9px);
 }
 
 .exclusive-favorites,
