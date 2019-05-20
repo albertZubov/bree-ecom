@@ -419,9 +419,14 @@ a {
 	column-gap: 123px;
 }
 
-.footer-catalog-list a:hover {
+.footer-catalog-list a:hover,
+.filter-shoes label:hover,
+.filter-brands-wrapper label:hover {
 	color: #fff;
 	transform: scale(1.1);
+}
+
+.footer-catalog-list a:hover {
 	display: inline-block;
 }
 
@@ -534,7 +539,9 @@ a {
 }
 
 #filters:target {
+	position: sticky;
 	overflow-y: hidden;
+	padding-right: 18px;
 }
 
 .filters-list {
@@ -565,6 +572,7 @@ a {
 .filters label {
 	color: #666666;
 	line-height: 30px;
+	cursor: pointer;
 }
 
 .filter-shoes-wrapper {
@@ -606,6 +614,10 @@ a {
 	top: calc(50% - 4px);
 	background: url(../img/check-filter-colors.svg) no-repeat center;
 	display: none;
+}
+
+.filter-colors label[for="white"]::before {
+	background: url(../img/check-filter-colors-white.svg) no-repeat center;
 }
 
 .filter-size input:checked+label {
@@ -1120,7 +1132,8 @@ body .col-2 {
 	margin-right: 10px;
 }
 
-.add-basket {
+.add-basket,
+.modal .button {
 	color: #ffffff;
 	padding: 18px 30px;
 	background-color: #000;
@@ -1826,4 +1839,63 @@ body .col-2 {
 
 .found-products {
 	margin-bottom: 70px;
+}
+
+/*Форма обратной связи*/
+
+.modal {
+    color: #000;
+    background-color: #fff;
+    position: fixed;
+    z-index: 2;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.modal-contact {
+    width: 700px;
+    top: 0;
+    left: 50%;
+    margin-left: -350px;
+    display: none;
+}
+
+.modal-show {
+    display: flex;
+}
+
+.modal-contact form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.modal-contact .appointment-item-contacts {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal-contact .appointment-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.modal .button {
+	border: none;
+	
+}
+
+.modal-close {
+    top: 24px;
+    right: 20px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url(../img/modal-close.svg) no-repeat center center;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+    border: 0;
 }
