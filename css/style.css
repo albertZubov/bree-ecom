@@ -12,6 +12,29 @@
 	font-style: normal;
 }
 
+@keyframes shake {
+	0%,
+	to {
+		-webkit-transform: translateX(0);
+		transform: translateX(0)
+	}
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		-webkit-transform: translateX(-10px);
+		transform: translateX(-10px)
+	}
+	20%,
+	40%,
+	60%,
+	80% {
+		-webkit-transform: translateX(10px);
+		transform: translateX(10px)
+	}
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -231,7 +254,7 @@ a {
 	margin-bottom: 50px;
 }
 
-.catalog-product {
+.inner-page-exclusive .catalog-product {
 	background: url(../img/bg-pattern-exclusive-2.png) no-repeat 185% 36%, url(../img/bg-pattern-exclusive.png) no-repeat 444% 104%;
 }
 
@@ -331,6 +354,13 @@ a {
 	height: 50px;
 	background: #0089cf url(../img/logo.svg) no-repeat center;
 	margin-right: 30px;
+	transition: transform .5s;
+}
+
+.header-logo:hover,
+.footer-logo:hover {
+	transform: rotate(180deg);
+	transition: transform .5s;
 }
 
 .footer-logo {
@@ -1843,59 +1873,123 @@ body .col-2 {
 
 /*Форма обратной связи*/
 
-.modal {
-    color: #000;
-    background-color: #fff;
-    position: fixed;
-    z-index: 2;
-    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+.modal-contact,
+.modal-overlay {
+	position: absolute;
+	top: 120px;
+	left: 50%;
+	opacity: 0;
+	pointer-events: none;
+	cursor: none;
+	z-index: 8;
+	transform: scale(0);
 }
 
 .modal-contact {
-    width: 700px;
-    top: 0;
-    left: 50%;
-    margin-left: -350px;
-    display: none;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+	width: 700px;
+	margin-left: -350px;
+	color: #000;
+	background-color: #fff;
 }
 
-.modal-show {
-    display: flex;
+.modal-overlay {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+	background: rgba(0, 0, 0, .3);
+}
+
+.modal-show,
+.modal-overlay-show {
+	position: fixed;
+	visibility: visible;
+	opacity: 1;
+	pointer-events: auto;
+	cursor: auto;
+	transform: scale(1);
+	transition: transform .4s;
 }
 
 .modal-contact form {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 40px;
 }
 
 .modal-contact .appointment-item-contacts {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
 }
 
 .modal-contact .appointment-item {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.appointment-item:first-child {
+	margin-right: 30px;
+}
+
+.appointment-item label {
+	margin-bottom: 10px;
+	padding-left: 15px;
+}
+
+.appointment-item input,
+.appointment-item textarea {
+	background-color: #f2f9fd;
+	border: none;
+}
+
+.appointment-item input:active,
+.appointment-item textarea:active,
+.appointment-item input:focus,
+.appointment-item textarea:focus {
+	border: none;
+	outline: none;
+}
+
+.appointment-item input {
+	padding: 15px;
+}
+
+.appointment-item textarea {
+	padding-top: 15px;
+	padding-left: 15px;
+	margin-bottom: 20px;
 }
 
 .modal .button {
 	border: none;
-	
+	margin-left: 15px;
+	text-transform: uppercase;
+	cursor: pointer;
 }
 
-.modal-close {
-    top: 24px;
-    right: 20px;
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: url(../img/modal-close.svg) no-repeat center center;
-    font-size: 0;
-    line-height: 0;
-    cursor: pointer;
-    border: 0;
+.modal-contact .btn-close-form {
+	top: 25px;
+	right: 25px;
+	opacity: 1;
+	transition: transform .5s, opacity .3s;
+}
+
+.modal-contact .btn-close-form:hover {
+	transform: rotate(360deg);
+	opacity: .5;
+}
+
+.modal-contact input::-webkit-input-placeholder,
+.modal-contact textarea::-webkit-input-placeholder { 
+	text-transform: uppercase;
+	opacity: .7;
+}
+
+.modal-error {
+	-webkit-animation: shake .5s;
+	animation: shake .5s
 }

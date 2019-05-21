@@ -150,5 +150,28 @@
 		</section>
 		<p class="copyright">Copyright © 2015 Bree Orthonormai. All rights reserved.</p>
 	</footer>
+		<section class="modal modal-contact">
+		<h2 class="visually-hidden">Форма обратной связи</h2>
+		<form action="#0" method="post">
+			<div class="appointment-item-contacts">
+				<p class="appointment-item">
+					<label for="appointment-name">your name:</label>
+					<input id="appointment-name" type="text" name="name" placeholder="Name Surname">
+				</p>
+				<p class="appointment-item">
+					<label for="appointment-email">your e-mail:</label>
+					<input id="appointment-email" type="email" name="email" placeholder="email@example.com">
+				</p>
+			</div>
+			<p class="appointment-item">
+				<label for="appointment-letter">text of the letter:</label>
+				<textarea id="appointment-letter" name="appointment-letter" rows="8" cols="70" placeholder="In a free form"></textarea>
+			</p>
+			<button class="button" type="submit">to send</button>
+		</form>
+		<button class="btn-close-form" type="button">Закрыть</button>
+	</section>
+	<div class="modal-overlay"></div>
+	<script type="text/javascript" src="js/letter.js"></script>
 </body>
 </html>
