@@ -336,6 +336,10 @@ a {
 	display: inline-block;
 }
 
+.price span::before {
+	text-decoration: line-through;
+}
+
 .main-footer {
 	background-color: #0c0d0d;
 	color: #666666;
@@ -523,7 +527,7 @@ a {
 }
 
 .filter-button {
-	top: 677px;
+	top: 72%;
 	left: 50%;
 	margin-left: -30px;
 	width: 60px;
@@ -933,11 +937,24 @@ a {
 	position: relative;
 }
 
+.inner-page-blocs .col-2 .catalog-blocs-item {
+	padding: 0;
+}
+
 .catalog-blocs-item:hover,
 .footwear-product-item:hover,
 .found-products-item:hover {
 	box-shadow: 0 0 10px rgba(0,0,0,.3);
 	cursor: pointer;
+}
+
+.catalog-blocs-item:hover .exclusive-basket,
+.footwear-product-item:hover .exclusive-basket,
+.found-products-item:hover .exclusive-basket,
+.catalog-blocs-item:hover .exclusive-favorites,
+.footwear-product-item:hover .exclusive-favorites,
+.found-products-item:hover .exclusive-favorites {
+	display: flex;
 }
 
 .product-picture {
@@ -1007,25 +1024,25 @@ body .col-2 {
 }
 
 .col-1 .advertising {
+	background: url(../img/catalog-footwear-13.jpg) no-repeat center;
 	padding: 0;
+	padding-top: 35px;
 }
 
 .advertising .advertising-new,
 .advertising .advertising-heading {
-	position: absolute;
 	color: #fff;
 	margin: 0;
 	text-align: center;
 }
 
 .advertising .advertising-new {
-	top: 37px;
+	margin-bottom: 25px;
 }
 
 .advertising .advertising-heading {
 	font-size: 55px;
-	top: 86px;
-	line-height: 50px;
+	line-height: 55px;
 }
 
 .inner-page-footwear .col-1 {
@@ -1046,7 +1063,7 @@ body .col-2 {
 }
 
 .catalog-blocs-raf img {
-	margin-bottom: 30px;
+	margin-bottom: 24px;
 }
 
 .catalog-blocs-raf h2 {
@@ -1443,7 +1460,6 @@ body .col-2 {
 	margin: 0;
 	text-align: center;
 	margin-bottom: 10px;
-	line-height: 25px;
 	letter-spacing: 1.125px;
 }
 
@@ -1753,6 +1769,9 @@ body .col-2 {
 	width: 16px;
 	height: 14px;
 	top: 36px;
+	border: none;
+	cursor: pointer;
+	display: none;
 }
 
 .exclusive-favorites {
@@ -1763,6 +1782,19 @@ body .col-2 {
 .exclusive-basket {
 	background: url(../img/footwear-basket.svg) no-repeat center;
 	right: 33px;
+}
+
+.exclusive-favorites:hover ,
+.exclusive-basket:hover {
+	transform: scale(1.2);
+} 
+
+.exclusive-favorites:active,
+.exclusive-basket:active,
+.exclusive-favorites:focus,
+.exclusive-basket:focus {
+	outline: none;
+	border: none;
 }
 
 .filter-input:checked label {
