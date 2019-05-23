@@ -71,8 +71,8 @@
 		<nav class="main-navigation">
 			<a href="product-page.html" class="header-logo">Логотип Bree-ecom</a>
 			<ul class="site-navigation">
-				<li><a href="#0">footwear</a></li>
-				<li><a href="product-blocs.html">clothing</a></li>
+				<li><a href="catalog-footwear.html">footwear</a></li>
+				<li><a href="#0">clothing</a></li>
 				<li><a href="#0">acessories</a></li>
 				<li><a>brands</a></li>
 				<li><a href="product-blocs.html">clearance</a></li>
@@ -277,6 +277,29 @@
 		</section>
 		<p class="copyright">Copyright © 2015 Bree Orthonormai. All rights reserved.</p>
 	</footer>
+	<section class="modal modal-contact">
+		<h2 class="visually-hidden">Форма обратной связи</h2>
+		<form action="#0" method="post">
+			<div class="appointment-item-contacts">
+				<p class="appointment-item">
+					<label for="appointment-name">your name:</label>
+					<input id="appointment-name" type="text" name="name" placeholder="Name Surname">
+				</p>
+				<p class="appointment-item">
+					<label for="appointment-email">your e-mail:</label>
+					<input id="appointment-email" type="email" name="email" placeholder="email@example.com">
+				</p>
+			</div>
+			<p class="appointment-item">
+				<label for="appointment-letter">text of the letter:</label>
+				<textarea id="appointment-letter" name="appointment-letter" rows="8" cols="70" placeholder="In a free form"></textarea>
+			</p>
+			<button class="button" type="submit">to send</button>
+		</form>
+		<button class="btn-close-form" type="button">Закрыть</button>
+	</section>
+	<div class="modal-overlay"></div>
+	<script src="js/letter.js"></script>
 	<script src="js/search.js"></script>
 </body>
 </html>

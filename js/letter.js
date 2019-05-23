@@ -41,6 +41,7 @@ window.addEventListener("keydown", function(evt) {
 			evt.preventDefault();
 			popup.classList.remove("modal-show");
 			popupContacts.classList.remove("modal-error");
+			overlay.classList.remove("modal-overlay-show");
 		}
 	}
 });
