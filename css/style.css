@@ -316,7 +316,8 @@ a {
 .products-basket-description,
 .search-start-heading,
 .quantity-found-goods,
-.found-products-list h2 {
+.found-products-list h2,
+.feedback {
 	margin: 0;
 	font-size: 18px;
 	font-weight: 500;
@@ -337,7 +338,7 @@ a {
 }
 
 .price span::before {
-	text-decoration: line-through;
+	text-decoration: inherit;
 }
 
 .main-footer {
@@ -377,7 +378,7 @@ a {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	margin-bottom: 60px;
+	margin-bottom: 30px;
 }
 
 .footer-social-wrapper {
@@ -388,7 +389,26 @@ a {
 	display: -o-flex;
 	display: flex;
 	flex-direction: column;
+}
+
+.footer-social--wrapper {
 	border-bottom: 2px solid #252626;
+	margin-bottom: 15px;
+}
+
+.feedback {
+	padding: 10px;
+	border: 1px solid #fff;
+	background-color: transparent;
+	color: #fff;
+	text-transform: inherit;
+	cursor: pointer;
+	opacity: .3;
+}
+
+.feedback:active,
+.feedback:focus {
+	outline: none;
 }
 
 .footer-social {
@@ -397,7 +417,7 @@ a {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .footer-social li:first-child a {
@@ -417,15 +437,16 @@ a {
 }
 
 .social-button:hover,
-.footer-social-wrapper .subscription:hover,
-.footer-social-wrapper .subscription:hover::before {
+.feedback:hover,
+.subscription-btn:hover {
 	opacity: 1;
 }
 
 .social-button:active,
-.footer-social-wrapper .subscription:active,
-.footer-social-wrapper .subscription:active::before {
+.feedback:active,
+.subscription-btn:active {
 	opacity: .6;
+	outline: 0;
 }
 
 .youtube-icon {
@@ -480,6 +501,36 @@ a {
 	display: flex;
 	align-items: center;
 	color: #fff;
+	margin-bottom: 15px;
+}
+
+.subscription input {
+	background: transparent;
+	border: none;
+	min-width: 55%;
+	color: #fff;
+	line-height: 26px;
+}
+
+.subscription input:focus,
+.subscription input:active {
+	outline: none;
+}
+
+.subscription input:focus ~ .subscription-btn,
+.subscription-btn:hover {
+	display: inline-block;
+}
+
+.subscription-btn {
+	display: none;
+	margin-left: auto;
+	background: transparent;
+	color: inherit;
+	text-transform: uppercase;
+	border: 1px solid #fff;
+	padding: 5px;
+	cursor: pointer;
 	opacity: .3;
 }
 
@@ -527,7 +578,7 @@ a {
 }
 
 .filter-button {
-	top: 72%;
+	bottom: 22%;
 	left: 50%;
 	margin-left: -30px;
 	width: 60px;
@@ -946,6 +997,7 @@ a {
 .found-products-item:hover {
 	box-shadow: 0 0 10px rgba(0,0,0,.3);
 	cursor: pointer;
+	transition: box-shadow .2s;
 }
 
 .catalog-blocs-item:hover .exclusive-basket,
@@ -1908,7 +1960,7 @@ body .col-2 {
 .modal-contact,
 .modal-overlay {
 	position: absolute;
-	top: 120px;
+	top: 50%;
 	left: 50%;
 	opacity: 0;
 	pointer-events: none;
@@ -1921,6 +1973,7 @@ body .col-2 {
 	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
 	width: 700px;
 	margin-left: -350px;
+	margin-top: -225px;
 	color: #000;
 	background-color: #fff;
 }

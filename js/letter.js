@@ -1,4 +1,4 @@
-var link = document.querySelector(".footer-social-wrapper .subscription");
+var link = document.querySelector(".footer-social-wrapper .feedback");
 var popup = document.querySelector(".modal-contact");
 var popupContacts = document.querySelector(".appointment-item-contacts");
 var close = popup.querySelector(".btn-close-form");
