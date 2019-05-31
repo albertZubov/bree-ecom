@@ -437,14 +437,13 @@ a {
 }
 
 .social-button:hover,
-.feedback:hover,
-.subscription-btn:hover {
+.feedback:hover {
 	opacity: 1;
 }
 
 .social-button:active,
 .feedback:active,
-.subscription-btn:active {
+.footer-social--wrapper .subscription-btn:active {
 	opacity: .6;
 	outline: 0;
 }
@@ -494,6 +493,7 @@ a {
 }
 
 .footer-social-wrapper .subscription {
+	position: relative;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -517,21 +517,28 @@ a {
 	outline: none;
 }
 
-.subscription input:focus ~ .subscription-btn,
-.subscription-btn:hover {
-	display: inline-block;
+.subscription input:valid ~ .subscription-btn {
+	position: absolute;
+	opacity: .3;
+	pointer-events: auto;
+}
+
+.subscription input:focus ~ .subscription-btn:hover {
+	display: block;
+	opacity: 1;
 }
 
 .subscription-btn {
-	display: none;
-	margin-left: auto;
+	position: absolute;
+	right: 0;
+	opacity: 0;
+	pointer-events: none;
 	background: transparent;
 	color: inherit;
 	text-transform: uppercase;
 	border: 1px solid #fff;
 	padding: 5px;
 	cursor: pointer;
-	opacity: .3;
 }
 
 .footer-social-wrapper .subscription::before {
